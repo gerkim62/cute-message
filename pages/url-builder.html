@@ -203,7 +203,7 @@ function createAndShareLink(e){
 
   const url = location.origin+`?from=${senderNameInput}&to=${receiverNameInput}&ei=${eventIndexInput}&qi=${messageIndexInput}`
   console.log(url)
-  document.getElementById('messageModal').innerHTML+= `<a class="btn btn-primary d-flex justify-content-center mt-3 mx-5" href="whatsapp://send?text=My beautiful surprise message for you: ${url}" data-action="share/whatsapp/share" target="_blank"> Share to WhatsApp </a>`
+  document.getElementById('messageModal').innerHTML+= `<a class="btn btn-primary d-flex justify-content-center mt-3 mx-5" href="whatsapp://send?text=My beautiful surprise message for you: ${url.replace('&','%26')} enjoy!" data-action="share/whatsapp/share" target="_blank"> Share to WhatsApp </a>`
     if ("share" in navigator) {
     navigator
       .share({
