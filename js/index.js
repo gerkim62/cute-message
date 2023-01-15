@@ -113,8 +113,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
   
   const sender = urlParams['from'] || 'Your Friend'
   const receiver = urlParams['to'] || 'You'
-  const eventIndex = urlParams['ei'] || 0
-  const event = events[eventIndex]
+  const eventIndex = urlParams['ei'] || NaN
+  const event = events[eventIndex]||'Day!'
   
   const quoteIndex =  Number(urlParams['qi'])||0
   console.log({quoteIndex})
