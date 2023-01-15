@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Lovers+Quarrel');
+
+/* loader */
+:root {
+  --spinner-size: 50px;
+  --spinner-color: #F06793;
+}
+
+body {
+ background: #FFEBF3;
+  color: white;
+}
+
+.hidden{
+  display: none !important;
+}
+.text-center{
+  text-align: center;
+}
+.cta{
+  color: black;
+}
+.loader {
+  width: 100vw !important;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 20vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0);
+  transform: scale(1);
+  background: #FFEBF3;
+  z-index: 10;
+  
+}
+
+.spinner {
+  width: var(--spinner-size);
+  height: var(--spinner-size);
+  position: relative;
+  transform: rotate(45deg);
+  border-radius: 50%;
+  bottom: 12.5%;
+}
+
+.spinner svg {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  width: 70%;
+  height: 70%;
+  opacity: 1;
+}
+
+.spinner-dot {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: spinner-dot 1.5s infinite ease;
+}
+
+.spinner-dot:before {
+  content: '';
+  display: block;
+  width: 25%;
+  height: 25%;
+  background-color: var(--spinner-color);
+  border-radius: 100%;
+  transform: scale(.4);
+  /*animation: spinner-dot-before 2.0s infinite ease-in; */
+}
+
+.spinner-dot:nth-child(1) {
+  animation-delay: -1.1s;
+}
+
+.spinner-dot:nth-child(2) {
+  animation-delay: -1.0s;
+}
+
+.spinner-dot:nth-child(3) {
+  animation-delay: -0.9s;
+}
+
+.spinner-dot:nth-child(4) {
+  animation-delay: -0.8s;
+}
+
+.spinner-dot:nth-child(5) {
+  animation-delay: -0.7s;
+}
+
+.spinner-dot:nth-child(6) {
+  animation-delay: -0.6s;
+}
+
+.spinner-dot:nth-child(1):before {
+  animation-delay: -1.1s;
+}
+
+.spinner-dot:nth-child(2):before {
+  animation-delay: -1.0s;
+}
+
+.spinner-dot:nth-child(3):before {
+  animation-delay: -0.9s;
+}
+
+.spinner-dot:nth-child(4):before {
+  animation-delay: -0.8s;
+}
+
+.spinner-dot:nth-child(5):before {
+  animation-delay: -0.7s;
+}
+
+.spinner-dot:nth-child(6):before {
+  animation-delay: -0.6s;
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(45deg);
+  }
+
+  0% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes spinner-dot {
+
+  70%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-dot-before {
+  50% {
+    transform: scale(0.4);
+  }
+
+  100%,
+  0% {
+    transform: scale(.4);
+  }
+}
+
+/*animated text*/
+* {
+  box-sizing: border-box;
+}
+
+/*body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: hsl(0 0% 20%);
+}*/
+
+.animated-text {
+  --bg-size: 300%;
+  --color-one: #F06793;
+  --color-two: #FFEBF3;
+  background: linear-gradient(
+      90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animated-text {
+    -webkit-animation: move-bg 6s linear infinite;
+            animation: move-bg 6s linear infinite;
+            animation-delay: 0s;
+            
+  }
+  @-webkit-keyframes move-bg {
+    50%,100% {
+      background-position: var(--bg-size) 0;
+    }
+  }
+  @keyframes move-bg {
+    5%,50% {
+      background-position: var(--bg-size) 0;
+    }
+  }
+}
+
+
+/*love card*/
+
+body {
+  
+  animation-name: beat-back;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.back {
+  text-align: center;
+  padding: 10px;
+  color: black;
+  
+}
+
+.topic {
+  opsition: absolute;
+  margin: 10px 0px 10px 0px;
+  font-family: Fredericka the Great !important;
+  font-weight: 400;
+  line-height: 1.15;
+}
+#sender-name,#receiver-name{
+  font-weight: bold;
+  letter-spacing: 1px !important;
+}
+
+.content-1 {
+  opsition: absolute;
+  margin: 30px 0px 10px 0px;
+  font-family: Lovers Quarrel;
+  font-size: 40px;
+}  
+
+.content-2 {
+  opsition: absolute;
+  margin: 0px 0px 80px 0px;
+  font-family: Lovers Quarrel;
+  font-size: 40px;
+}  
+
+.footer {
+  opsition: absolute;
+  margin: 80px 0px 10px 0px;
+  font-family: Fredericka the Great;
+}
+
+.heart {
+  margin: auto;
+  background-color: pink;
+  height: 100px;
+  width: 100px;
+  transform: rotate(-45deg);
+  animation-name: beat;
+  animation-duration: 1s;
+  animation-iteration-count: infinite; 
+}
+
+.heart:after {
+  background-color: pink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0px;
+  left: 50px;
+}
+
+.heart:before {
+  background-color: pink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 0px;
+}
+
+.heart:hover {
+  background-color: #F06793;
+  animation-duration: 200ms;
+  transform: scale(1.3) rotate(-45deg);
+}
+
+.heart:hover:before {
+  background-color: #F06793;
+}
+
+.heart:hover:after {
+  background-color: #F06793;
+}
+
+.heart:active {
+}
+
+@keyframes beat {
+  0% {
+      transform: scale(1) rotate(-45deg);
+    }
+  50% {
+      transform: scale(0.8) rotate(-45deg);
+    }
+}
+
+@keyframes beat-back {
+  50% {
+      background: #ffe6f2;
+    }
+}
+
+/*
+
+/*gradients border*/
+.gradient-border {
+  --borderWidth: 2px;
+  /*background: #1D1F20;*/
+  background: #FFEBF3;
+  position: relative;
+  border-radius: calc(var(--borderWidth) / .9);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  -webkit-animation: animatedgradient 1s ease alternate infinite;
+          animation: animatedgradient 1s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@-webkit-keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
