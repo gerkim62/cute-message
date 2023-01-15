@@ -11,6 +11,101 @@
 <body>
 
 <script>
+const quotes = ['The universe is super blessed to have you in it!',  "You are the sunshine that brightens my day.",
+  "You are the reason I wake up in the morning.",
+  "You are my rock, my shelter and my everything.",
+  "With you, every day feels like a fairytale.",
+  "You are the missing piece that completes me.",
+  "You make my heart skip a beat.",
+  "You are my home, my safe place.",
+  "You are my everything and more.",
+  "You light up my world like nobody else.",
+  "I am so grateful to have you in my life.",
+  "You are my best friend, my lover, and my soulmate.",
+  "I never knew love could be this amazing, until I met you.",
+  "You make my life a beautiful journey.",
+  "I am forever yours.",
+  "I love you more than words can express."]
+
+//let messages = []
+
+
+const events = ['Day',   "Birthday",
+  "Anniversary",
+  "New Year",
+  "Christmas",
+  "Independence Day",
+  "Mashujaa Day",
+  "Labour Day",
+  "Madaraka Day",
+  "Jamhuri Day",
+  "Maulid",
+  "Good Friday",
+  "Easter Monday",
+  "Idd-Ul-Fitr",
+  "Idd-Ul-Adha",
+  "Wedding Day",
+  "Graduation Day",
+  "Promotion Day",
+  "Retirement Day",
+  "Housewarming Day",
+  "Baby Shower",
+  "Engagement Day",
+  "Baptism Day",
+  "First Communion Day",
+  "Confirmation Day",
+  "Bar Mitzvah",
+      "Mother's Day",
+      "Father's Day",
+      "Thanksgiving",
+      "Easter",
+      "Halloween",
+      "Hanukkah",
+      "Kwanzaa",
+      "Ramadan",
+      "Diwali",
+      "Chinese New Year",
+      "Children's Day",
+      "Women's Day",
+      "Men's Day",
+      "Veteran's Day",
+      "Memorial Day",
+      "Flag Day",
+      "Patriot Day",
+      "National Day",
+      "International Women's Day",
+      "International Men's Day",
+      "Global Entrepreneurship Day",
+      "World Aids Day",
+      "World Environment Day",
+      "World Cancer Day",
+      "World Health Day",  "Teacher's Day",
+        "Doctor's Day",
+        "Nurse's Day",
+        "Police Day",
+        "Firefighters Day",
+        "Armed Forces Day",
+        "World Water Day",
+        "World Food Day",
+        "World Peace Day",
+        "World Wildlife Day",
+        "World Ocean Day",
+        "World Animal Day",
+        "World Mental Health Day",
+        "World Tourism Day",
+        "World Day of Social Justice",
+        "World Youth Skills Day",
+        "World Population Day",
+        "World Day Against Child Labor",
+        "World Day of Remembrance for Road Traffic Victims",
+        "World Day for Safety and Health at Work",
+        "World Press Freedom Day",
+        "World Book and Copyright Day",
+        "World Intellectual Property Day",
+        "World Meteorological Day",
+        "World Telecommunication and Information Society Day"].sort()
+
+
   function createSelectList(arr, id) {
   const select = document.createElement("select");
   select.classList.add("form-control");
@@ -60,11 +155,11 @@ const modal = `
 </div>
 <div class="form-group">
 <label for="messageSelect">Select a Message</label>
-${createSelectList(messages, 'messages').outerHTML}
+${createSelectList(quotes, 'messages').outerHTML}
 </div>
 <div class="form-group">
 <label for="messageSelect">Select a Day</label>
-${createSelectList(messages, 'days').outerHTML}
+${createSelectList(events, 'days').outerHTML}
 </div>
 </div>
 <div class="modal-footer">

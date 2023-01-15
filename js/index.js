@@ -90,7 +90,7 @@ const events = ['Day',   "Birthday",
         "World Book and Copyright Day",
         "World Intellectual Property Day",
         "World Meteorological Day",
-        "World Telecommunication and Information Society Day"]
+        "World Telecommunication and Information Society Day"].sort()
 
 function extractUrlParams(url = window.location.href) {
   const urlParams = new URLSearchParams(new URL(url).search);
@@ -117,9 +117,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const event = events[eventIndex]
   
   const quoteIndex =  Number(urlParams['qi'])||0
-  console.log(quoteIndex)
+  console.log({quoteIndex})
   const quote = quotes[quoteIndex]
-  
+  console.log(quote)
   document.getElementById('sender-name').textContent = sender
   document.getElementById('receiver-name').textContent = receiver
   document.getElementById('quote').textContent = quote
